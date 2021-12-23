@@ -27,7 +27,7 @@
       let TestDataClass = ncmb.DataStore(db);
       let name = $("#name").val();
       TestDataClass
-        .equalTo("name",name)
+        .regularExpressionTo("name",name)
         .fetchAll()
         .then(function(results) {
           showResults(results);
